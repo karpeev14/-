@@ -16,3 +16,15 @@ class Program
             Console.WriteLine(str);
         }
     }
+static string[] FilterStrings(string[] strings)
+    {
+        int count = 0;
+
+        // Первый проход: определить количество подходящих строк.
+        for (int i = 0; i < strings.Length; i++)
+        {
+            if (strings[i].Length <= 3)
+            {
+                count++;
+            }
+        }
