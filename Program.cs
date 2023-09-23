@@ -28,6 +28,21 @@ static string[] FilterStrings(string[] strings)
                 count++;
             }
         }
+        
         // Создать новый массив с подходящими строками.
         string[] filteredStrings = new string[count];
         int index = 0;
+
+        // Второй проход: сохранить подходящие строки в новом массиве.
+        for (int i = 0; i < strings.Length; i++)
+        {
+            if (strings[i].Length <= 3)
+            {
+                filteredStrings[index] = strings[i];
+                index++;
+            }
+        }
+
+        return filteredStrings;
+    }
+}
