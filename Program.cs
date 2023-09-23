@@ -28,3 +28,6 @@ static string[] FilterStrings(string[] strings)
                 count++;
             }
         }
+        // Создать новый массив с подходящими строками.
+        string[] filteredStrings = new string[count];
+        int index = 0;
